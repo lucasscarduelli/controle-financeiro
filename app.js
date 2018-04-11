@@ -1,5 +1,9 @@
 'use strict';
 
+require('dotenv').config();
+
+require('./db/index');
+
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
