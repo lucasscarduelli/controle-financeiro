@@ -1,0 +1,25 @@
+{
+  "name": "control-financeiro",
+  "version": "0.0.1",
+  "description": "API de serviços financeiros",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasscarduelli/controle-financeiro.git"
+  },
+  "keywords": [
+    "api",
+    "finance",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "Lucas Boeing Scarduelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucasscarduelli/controle-financeiro/issues"
+  },
+  "homepage": "https://github.com/lucasscarduelli/controle-financeiro#readme"
+}
