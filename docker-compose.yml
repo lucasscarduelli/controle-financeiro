@@ -1,0 +1,20 @@
+version: '1'
+services:
+    app:
+        container_name: "controle-financeiro-nodejs"
+        image: node:5.9.1
+        working_dir: /usr/app
+        volumes:
+            - .:/usr/app
+        mem_limit: 512mb
+        memswap_limit: 512mb
+        environment:
+            NODE_ENV: "dev-db-local"
+        command: "npm start"
+#        links:
+#            - mongo
+        network_mode: "host"
+    mongo:
+        container_name: "controle-financeiro-db"
+        image: mongo:3.4.14
+        network_mode: "host"

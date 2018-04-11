@@ -4,7 +4,8 @@
   "description": "API de serviços financeiros",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "test": "mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,27 @@
   "bugs": {
     "url": "https://github.com/lucasscarduelli/controle-financeiro/issues"
   },
-  "homepage": "https://github.com/lucasscarduelli/controle-financeiro#readme"
+  "homepage": "https://github.com/lucasscarduelli/controle-financeiro#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "currency-formatter": "^1.4.2",
+    "dateformat": "^3.0.3",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "md5": "^2.2.1",
+    "mongoose": "^5.0.14",
+    "morgan": "^1.9.0",
+    "node-cron": "^1.2.1",
+    "node-request": "0.0.3",
+    "node-uuid": "^1.4.8",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "mocha": "^5.0.5",
+    "nodemon": "^1.17.3"
+  }
 }
