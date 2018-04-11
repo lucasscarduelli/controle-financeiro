@@ -13,6 +13,7 @@ const cors = require('cors');
 const md5 = require('md5');
 
 const routes = require('./routes/index');
+const apiV1 = require('./routes/v1/index');
 
 var app = express();
 app.locals.dateFormat= require('dateformat');
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 app.use('/', routes);
+app.use('/api/v1/accounts', apiV1.account);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
