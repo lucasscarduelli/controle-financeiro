@@ -11,15 +11,15 @@ const _schema = {
     name : { type : String, required : true}
   },
   agency : {
-    number : { type : Integer, required : true},
-    checkNumber : { type : Integer, required : true}
+    number : { type : Number, required : true},
+    checkNumber : { type : Number, required : true}
   },
-  number : { type : Integer, required : true},
-  checkNumber : { type : Integer, required : true},
+  number : { type : Number, required : true},
+  checkNumber : { type : Number, required : true},
   amount : {
-    current : { type : Integer, required : true, default : 0 },
-    future : { type : Integer, required : true, default : 0 }
-  }
+    current : { type : Number, required : true, default : 0 },
+    future : { type : Number, required : true, default : 0 }
+  },
   dateOpened : { type : Date, required : true, default : new Date() },
   dateClosed : { type : Date },
   createdAt : { type : Date, required : true, default : new Date() },
