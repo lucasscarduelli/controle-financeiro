@@ -16,6 +16,10 @@ const _schema = {
   },
   number : { type : Integer, required : true},
   checkNumber : { type : Integer, required : true},
+  amount : {
+    current : { type : Integer, required : true, default : 0 },
+    future : { type : Integer, required : true, default : 0 }
+  }
   dateOpened : { type : Date, required : true, default : new Date() },
   dateClosed : { type : Date },
   createdAt : { type : Date, required : true, default : new Date() },
@@ -26,3 +30,6 @@ const accountSchema = new Schema(_schema);
 const AccountModel = mongoose.model('account', accountSchema);
 
 module.exports = AccountModel;
+
+// https://github.com/organizze/api-doc
+// https://dev.moip.com.br/v2/
