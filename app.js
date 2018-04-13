@@ -28,6 +28,8 @@ app.use(cors());
 
 app.use('/', routes);
 app.use('/api/v1/accounts', apiV1.account);
+app.use('/api/v1/categories', apiV1.category);
+app.use('/api/v1/credit-cards', apiV1.creditCard);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

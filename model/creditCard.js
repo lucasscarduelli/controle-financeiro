@@ -24,7 +24,8 @@ const _schema = {
     amount : { type : Number, required : true, default : 0 },
     paymentAmount : { type : Number, required : true, default : 0 },
     previousBalance : { type : Number, required : true, default : 0 },
-    balance : { type : Number, required : true, default : 0 }
+    balance : { type : Number, required : true, default : 0 },
+    transactions : [{ type: Schema.ObjectId, ref: 'transaction' }]
   }]
 };
 

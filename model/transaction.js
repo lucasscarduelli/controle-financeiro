@@ -17,7 +17,7 @@ const _schema = {
   installment : {
     total : { type : Number, required : true, default : 1 },
     number : { type : Number, required : true, default : 1 },
-    originalTransaction : { type: Schema.ObjectId, ref: 'payment' }
+    originalTransaction : { type: Schema.ObjectId, ref: 'transaction' }
   },
   account : { type: Schema.ObjectId, ref: 'account' },
   creditCard : { type: Schema.ObjectId, ref: 'creditCard' },
