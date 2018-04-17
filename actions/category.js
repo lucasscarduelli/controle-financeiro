@@ -25,6 +25,21 @@ Actions.create = function(req, res) {
   category.save((err, data) => {
       callback(err, data, res);
   });
-}
+};
+
+Actions.update = function(req, res) {
+  const query = { _id : req.params.id };
+  const body = req.body;
+
+  CategoryModel.update(query, body, (err, data) => {
+      if (data.ok) {
+          CategoryModel.findOne(query, (err, updatedData) => {
+              callback(err, updatedData, res);
+          });
+      } else {
+        callback(err, data, res);
+      }
+  });
+};
 
 module.exports = Actions;

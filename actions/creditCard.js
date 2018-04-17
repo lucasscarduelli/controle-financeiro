@@ -25,6 +25,21 @@ Actions.create = function(req, res) {
   creditCard.save((err, data) => {
       callback(err, data, res);
   });
-}
+};
+
+Actions.update = function(req, res) {
+  const query = { _id : req.params.id };
+  const body = req.body;
+
+  CreditCardModel.update(query, body, (err, data) => {
+      if (data.ok) {
+          CreditCardModel.findOne(query, (err, updatedData) => {
+              callback(err, updatedData, res);
+          });
+      } else {
+        callback(err, data, res);
+      }
+  });
+};
 
 module.exports = Actions;

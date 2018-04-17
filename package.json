@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha --recursive"
+    "test": "standard && mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
     "mocha": "^5.0.5",
-    "nodemon": "^1.17.3"
+    "nodemon": "^1.17.3",
+    "standard": "^11.0.1"
   }
 }
