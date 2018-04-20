@@ -30,6 +30,7 @@ app.use('/', routes);
 app.use('/api/v1/accounts', apiV1.account);
 app.use('/api/v1/categories', apiV1.category);
 app.use('/api/v1/credit-cards', apiV1.creditCard);
+app.use('/api/v1/transactions', apiV1.transaction);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
