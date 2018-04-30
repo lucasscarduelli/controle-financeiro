@@ -1,13 +1,13 @@
-'use strict';
+'use strict'
 
-const Service = {};
+const Service = {}
 
 Service.createInvoice = function(creditCardModel) {
 
-};
+}
 
 Service.addTransactionInInvoice = function(transactionModel) {
-  
-};
 
-module.exports = Service;
+}
+
+module.exports = Service

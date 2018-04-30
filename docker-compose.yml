@@ -1,7 +1,7 @@
-version: '1'
+version: '2'
 services:
     app:
-        container_name: "controle-financeiro-nodejs"
+        container_name: "controle-financeiro-api"
         image: node:5.9.1
         working_dir: /usr/app
         volumes:
@@ -10,9 +10,8 @@ services:
         memswap_limit: 512mb
         environment:
             NODE_ENV: "dev-db-local"
+            DB_URL: "mongodb://localhost:27017/controle-financeiro-db"
         command: "npm start"
-#        links:
-#            - mongo
         network_mode: "host"
     mongo:
         container_name: "controle-financeiro-db"
