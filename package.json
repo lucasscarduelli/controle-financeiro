@@ -4,7 +4,7 @@
   "description": "API de serviços financeiros",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "npm install && node ./bin/www",
     "test": "standard && mocha --recursive"
   },
   "repository": {
